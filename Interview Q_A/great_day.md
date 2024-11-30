@@ -17,7 +17,6 @@ echo "Today is ${1:-a great day!}"
 #### 1. This script uses parameter expansion in Bash (${1:-a great day!}).
 #### 2. If $1 (the first argument) is provided, it will use that value.
 #### 3. If $1 is not provided (i.e., it's empty), it defaults to the string "a great day!".
-
 ```
 #!/bin/bash
 

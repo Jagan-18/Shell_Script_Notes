@@ -3,7 +3,6 @@
 ### Objectives
 
 1. You are given two directories as arguments and the output should be any difference between the two directories
-
 ### Solution 1
 
 Suppose the name of the bash script is ```dirdiff.sh```

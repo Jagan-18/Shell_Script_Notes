@@ -38,7 +38,6 @@ fi
 
 #Service Health Check script
 #!/bin/bash
-
 SERVICE="nginx"
 
 # Check if the service is active

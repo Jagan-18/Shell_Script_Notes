@@ -33,7 +33,6 @@ case "$1" in
 esac
 
 ```
-
 ## Explanation of the simplified version:
 #### 1. case "$1" in: This starts a case block, which is another way to handle multiple conditions.
 #### 2. Foo) echo "bar" ;;: If the argument ($1) is "Foo", it prints "bar".

@@ -23,7 +23,6 @@ else
     echo "Backup failed"
     exit 1
 fi
-
 ### Explanation:
 #### 1. SOURCE_DIR: The directory you want to back up (/var/log/ in your example).
 #### 2. DEST_DIR: The directory where the backup will be stored. Replace /path/to/backup/directory with the actual path.
@@ -32,4 +31,5 @@ fi
 ####       -c: Create a new archive.
 ####       -z: Compress the archive with gzip.
 ####       -f: Use the filename provided ($BACKUP_FILENAME).
+
 ####       -C: Change to the directory (/var/log) before creating the backup (so the paths inside the archive aren't absolute).

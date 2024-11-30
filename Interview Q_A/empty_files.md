@@ -6,7 +6,6 @@
 
 
 ### Solution
-
 ```
 #! /bin/bash
 for x in *

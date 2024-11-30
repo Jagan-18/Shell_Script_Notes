@@ -1,5 +1,4 @@
 ## Shell Scripting - Hello World
-
 ### Objectives
 
 1. Define a variable with the string 'Hello World'

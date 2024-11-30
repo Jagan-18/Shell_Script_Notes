@@ -9,7 +9,6 @@ Note: assume the script is executed with an argument
 3. If it's not the string "pizza" print "I want pizza!"
 
 ### Solution
-
 ```
 #!/usr/bin/bash
 

@@ -4,9 +4,7 @@
 #### 1. AWS CLI installed: Ensure that the AWS CLI is installed and configured with appropriate IAM permissions to start/stop EC2 instances.
 #### 2. EC2 instance IDs: You need the instance IDs of the EC2 instances you want to manage.
 #### 3. IAM permissions: The IAM user or role running this script must have the startInstances and stopInstances permissions.
-
 #!/bin/bash
-
 # Set the EC2 instance IDs (comma-separated list)
 INSTANCE_IDS="i-xxxxxxxxxxxxxxxxx i-yyyyyyyyyyyyyyyyy"
 

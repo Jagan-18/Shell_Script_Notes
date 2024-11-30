@@ -18,7 +18,6 @@ then
    mailx -s "Server $SERVERIP is down" -t "$NOTIFYEMAIL" < /dev/null
 fi
 ```
-
 ## Explanation:
 #### SERVERIP: A variable that holds the IP address of the server you want to monitor. Replace <IP Address> with the actual IP address you want to check (e.g., 192.168.1.1).
 #### NOTIFYEMAIL: A variable that holds the email address where the notification will be sent if the server is unreachable. SSReplace test@example.com with the actual email address (e.g., admin@mydomain.com).

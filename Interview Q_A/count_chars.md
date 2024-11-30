@@ -45,7 +45,6 @@ done
 
 ```
 
-
 ### Explanation:
 1. #!/usr/bin/env bash: The shebang to use the Bash shell.
 2. while true; do ... done: This creates an infinite loop, which continues until explicitly broken.

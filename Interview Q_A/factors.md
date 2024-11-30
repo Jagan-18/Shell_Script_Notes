@@ -9,7 +9,6 @@ Write a script that when given a number, will:
 * If none of them (2 and 3) is a factor, print the number itself
 
 ### Solution
-
 ```
 #!/usr/bin/env bash
 

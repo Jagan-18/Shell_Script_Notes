@@ -20,7 +20,6 @@
 18. What are shell traps? How can they be used to handle signals and errors? Discuss the concept of traps and their usage in error handling and cleanup.
 
 
-
 ### Imp Q:
 1. Write a shell script to find and delete all files in a directory that are older than 30 days.
 2. Create a script to monitor the disk usage of a server. If usage exceeds 80%, log the details to a file and send an alert email. ## Refer: shell_script/18_disk-usea 
