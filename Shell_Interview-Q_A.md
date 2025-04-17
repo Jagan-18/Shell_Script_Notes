@@ -29,6 +29,7 @@ ps -e -o pid,comm --sort=pid | head -n 11
 - `-o pid,comm`: Specifies the output format to show only the PID and command name.
 - `--sort=pid`: Sorts the processes by their PID.
 - `head -n 11`: Displays the first 11 lines (including the header and the first 10 processes).
-```
+
+---
 
 
