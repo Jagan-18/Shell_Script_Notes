@@ -2,7 +2,6 @@
 ✅ Monitors CPU, Memory, and Disk Usage
 ✅ Sends alerts if thresholds are exceeded
 ---
-
 ```bash
 #!/bin/bash
 
@@ -39,7 +38,6 @@ fi
 echo "System Health Check Completed."
 ```
 ---
-
 # Here Explanation of  **System Health Monitoring** script down **step-by-step** so you fully understand what every part is doing.
 
 ---
@@ -60,7 +58,6 @@ DISK_THRESHOLD=90
 
 ---
 ### **2️⃣ Start Message**
-
 ```bash
 echo "Checking System Health..."
 ```
@@ -68,7 +65,6 @@ echo "Checking System Health..."
 * Just prints a **status message** so the user knows the check has started.
 ---
 ### **3️⃣ CPU Usage Calculation**
-
 ```bash
 CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}')
 CPU_INT=${CPU_USAGE%.*}
@@ -89,7 +85,6 @@ CPU_INT=${CPU_USAGE%.*}
 MEM_USAGE=$(free | awk '/Mem:/ {print ($3-$7)/$2 * 100.0}')
 MEM_INT=${MEM_USAGE%.*}
 ```
-
 * **`free`** → Shows memory usage in MB.
 * **`awk '/Mem:/ ...`** → Finds the line that starts with `Mem:`.
 * `$3` = total used memory, `$7` = buffers/cache, `$2` = total memory.
@@ -99,19 +94,14 @@ MEM_INT=${MEM_USAGE%.*}
 ---
 
 ## **5️⃣ Disk Usage Calculation**
-
 ```bash
 DISK_USAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
 ```
-
 * **`df -h /`** → Shows disk usage for `/` in human-readable form (`-h`).
 * **`awk 'NR==2 {print $5}'`** → Prints the **5th column** of the **second line** (which contains the usage percentage for `/`).
 * **`sed 's/%//'`** → Removes the `%` sign so it’s just a number.
-
 ---
-
 ### **6️⃣ Alert Checks**
-
 ```bash
 if [ "$CPU_INT" -ge "$CPU_THRESHOLD" ]; then
     echo "⚠️ CPU Usage High: $CPU_INT% | Threshold: $CPU_THRESHOLD%"
@@ -124,7 +114,6 @@ fi
 The **same logic** is applied to:
 
 * Memory check:
-
 ```bash
 if [ "$MEM_INT" -ge "$MEM_THRESHOLD" ]; then
 ```
@@ -136,19 +125,13 @@ if [ "$DISK_USAGE" -ge "$DISK_THRESHOLD" ]; then
 ```
 
 ---
-
 ## **7️⃣ End Message**
-
 ```bash
 echo "System Health Check Completed."
 ```
-
 * Just lets the user know the script has finished running.
-
 ---
-
 ## **8️⃣ How the Script Works in Practice**
-
 * You run it manually or set it in **cron** to run every few minutes.
 * It **checks system stats**.
 * If **any usage exceeds thresholds**, it **prints an alert** (you can also extend it to send email or save logs).
@@ -156,25 +139,22 @@ echo "System Health Check Completed."
 ---
 
 ✅ **Example Run Output:**
-
 ```
 Checking System Health...
 ⚠️ CPU Usage High: 85% | Threshold: 80%
 ⚠️ Disk Usage High: 91% | Threshold: 90%
 System Health Check Completed.
 ```
-
 ---
---- ### **9️⃣ Optional Enhancements**
+---
+# Optional Enhancements
 
 # Got it ✅ — I’ll upgrade your script so it not only checks CPU, memory, and disk usage, but also:
 # 1. **Logs every check** to a file (so you can review history).
 # 2. **Sends email alerts** when thresholds are exceeded.
 
 ---
-
 ## **Enhanced System Health Monitor**
-
 ```bash
 #!/bin/bash
 
@@ -239,7 +219,6 @@ echo "" >> "$LOG_FILE"
 ---
 
 ### **How This Works**
-
 1. **Logs everything**
 
    * Writes CPU, memory, and disk usage to `/var/log/system_health.log`.
